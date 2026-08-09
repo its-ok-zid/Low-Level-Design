@@ -1,31 +1,19 @@
 package PaymentGateway;
 
-public class CreditCardPayment {
+public class CreditCardPayment implements  Payment{
     private String cardHolderName;
     private int cvv;
-    private int cardNumber;
+    private String cardNumber;
 
-    public String getCardHolderName() {
-        return cardHolderName;
-    }
-
-    public void setCardHolderName(String cardHolderName) {
+    public CreditCardPayment(String cardHolderName, int cvv, String cardNumber) {
         this.cardHolderName = cardHolderName;
-    }
-
-    public int getCvv() {
-        return cvv;
-    }
-
-    public void setCvv(int cvv) {
         this.cvv = cvv;
-    }
-
-    public int getCardNumber() {
-        return cardNumber;
-    }
-
-    public void setCardNumber(int cardNumber) {
         this.cardNumber = cardNumber;
+    }
+
+    @Override
+    public void pay(Double amount) {
+        String lastFour = cardNumber.length() >= 4 ? cardNumber.substring(cardNumber.length() - 4) : cardNumber;
+        System.out.println("Paid $" + amount + " using Credit Card ending in " + lastFour + " (Holder: " + cardHolderName + ")");
     }
 }

@@ -1,28 +1,12 @@
 package PaymentGateway;
 
-public class ProcessPayment implements Payment{
+public class ProcessPayment{
 
-    private CreditCardPayment creditCardPayment;
-    private PayPalPayment payPalPayment;
-
-    private Double amountTobePay;
-
-    private String paymentType;
-
-    @Override
-    public void pay(Double amount, String cardType) {
-
-        if(cardType.equals("CREDIT CARD")){
-           amountTobePay=amount;
-            paymentType="CREDIT CARD";
+    void  processTransaction(Payment payment, Double amount){
+        if(payment==null){
+            System.out.println("Invalid payment method!");
+            return;
         }
-        else if(cardType.equals("PAYPAL")){
-            amountTobePay=amount;
-            paymentType="PAYPAL";
-        }
-    }
-
-    void display(){
-        System.out.println("The Amount paid is: "+amountTobePay+ " by: "+ paymentType);
+        payment.pay(amount);
     }
 }
