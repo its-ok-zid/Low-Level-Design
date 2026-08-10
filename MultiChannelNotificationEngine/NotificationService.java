@@ -4,13 +4,19 @@ import java.util.List;
 
 public class NotificationService {
 
-    void sendNotification(Channel channel) {
-        channel.send();
+    public void sendNotification(Channel channel) {
+        if (channel != null) {
+            channel.send();
+        }
     }
 
-    void broadcast(List<Channel> channels) {
-        for (Channel channel : channels) {
-            System.out.println("Broadcasting " + channel + " channel");
+    public void broadcast(List<Channel> channels) {
+        if (channels == null || channels.isEmpty()) {
+            return;
         }
+        System.out.println("\n\nBROADCASTING CHANNELS: \n");
+
+        for (Channel channel : channels)
+            channel.send();
     }
 }

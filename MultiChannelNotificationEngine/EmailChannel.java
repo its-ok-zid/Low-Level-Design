@@ -1,9 +1,9 @@
 package MultiChannelNotificationEngine;
 
 public class EmailChannel implements Channel {
-    String email;
-    String subject;
-    String body;
+    private final String email;
+    private final String subject;
+    private final String body;
 
     public EmailChannel(String email, String subject, String body) {
         this.email = email;

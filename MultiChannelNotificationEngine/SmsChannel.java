@@ -1,8 +1,8 @@
 package MultiChannelNotificationEngine;
 
 public class SmsChannel implements Channel {
-    String phoneNumber;
-    String body;
+    private final String phoneNumber;
+    private final String body;
 
     public SmsChannel(String phoneNumber, String body) {
         this.phoneNumber = phoneNumber;
@@ -11,6 +11,6 @@ public class SmsChannel implements Channel {
 
     @Override
     public void send() {
-        System.out.println("This is a message from the SMS channel having : \nPhoneNumber: "+phoneNumber+"\nBody: "+body);
+        System.out.println("This is a message from the SMS channel having : \nPhoneNumber: " + phoneNumber + "\nBody: " + body);
     }
 }
