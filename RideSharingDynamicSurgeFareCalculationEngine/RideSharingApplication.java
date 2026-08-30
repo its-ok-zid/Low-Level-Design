@@ -2,36 +2,20 @@ package RideSharingDynamicSurgeFareCalculationEngine;
 
 public class RideSharingApplication {
     public static void main(String[] args) {
-        // Create a trip with standard pricing
-        Trip trip1 = new Trip("T001", "Alice", 10.0, 15.0, new StandardPricing());
-        System.out.println("Trip ID: " + trip1.getTripId());
-        System.out.println("Rider: " + trip1.getRiderName());
-        System.out.println("Distance: " + trip1.getDistanceInKm() + " km");
-        System.out.println("Duration: " + trip1.getDurationInMinutes() + " minutes");
-        System.out.println("Fare (Standard Pricing): $" + trip1.calculateFare());
+        BillingService billingService = new BillingService();
 
-        // Change to late night pricing
-        trip1.setPricingStrategy(new LateNightPricing());
-        System.out.println("Fare (Late Night Pricing): $" + trip1.calculateFare());
+        // 1. Standard Pricing Trip
+        Trip trip1 = new Trip("TRIP-101", "Alice", 10.0, 15.0, new StandardPricing());
+        billingService.processTripFare(trip1);
 
-        // Complete the trip
-        trip1.completeTrip();
-        System.out.println("Is Trip Completed? " + trip1.isCompleted());
+        // 2. Peak Surge Pricing Trip (2.0x Multiplier)
+        Trip trip2 = new Trip("TRIP-102", "Bob", 8.0, 20.0, new PeakSurgePricing(2.0));
+        billingService.processTripFare(trip2);
 
-        // Create a trip with standard pricing
-        Trip trip2 = new Trip("T001", "Alice", 10.0, 15.0, new PeakSurgePricing(3.0));
-        System.out.println("Trip ID: " + trip2.getTripId());
-        System.out.println("Rider: " + trip2.getRiderName());
-        System.out.println("Distance: " + trip2.getDistanceInKm() + " km");
-        System.out.println("Duration: " + trip2.getDurationInMinutes() + " minutes");
-        System.out.println("Fare (Standard Pricing): $" + trip2.calculateFare());
-
-        // Change to late night pricing
-        trip2.setPricingStrategy(new LateNightPricing());
-        System.out.println("Fare (Late Night Pricing): $" + trip2.calculateFare());
-
-        // Complete the trip
-        trip2.completeTrip();
-        System.out.println("Is Trip Completed? " + trip2.isCompleted());
+        // 3. Dynamic Strategy Switch to Late-Night Pricing
+        Trip trip3 = new Trip("TRIP-103", "Charlie", 12.0, 25.0);
+        System.out.println(">>> Switching Charlie's trip to Late-Night Pricing:");
+        trip3.setPricingStrategy(new LateNightPricing());
+        billingService.processTripFare(trip3);
     }
 }
