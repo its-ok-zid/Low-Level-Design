@@ -6,6 +6,11 @@ The **Dynamic Surge & Fare Calculation Engine** processes trip fares for an on-d
 The primary objective is to apply the **Strategy Pattern** under SOLID principles, decoupling the trip model and billing orchestrator from specific tariff calculation algorithms.
 
 ---
+## 🏢 Company Context
+**Company:** Uber / Lyft / Grab Core Mobility Services  
+**Domain:** Real-Time Dispatch & Dynamic Pricing Infrastructure  
+**Scenario:** Dynamic demand, surge factors, weather alerts, and vehicle tier tiers (Economy, XL, Premier) dictate trip fares. Pricing algorithms must adapt continuously without affecting dispatch lifecycles or driver settlement engines.
+---
 
 ## 🎯 Requirements
 

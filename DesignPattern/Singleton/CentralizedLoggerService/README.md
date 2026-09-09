@@ -6,7 +6,11 @@ In high-throughput distributed systems, multiple threads produce telemetry, oper
 The objective is to implement a robust, production-grade **Singleton Design Pattern** leveraging **Double-Checked Locking** with `volatile`, guarded against reflection attacks, and backed by lock-free concurrent storage.
 
 ---
-
+## 🏢 Company Context
+**Company:** Google Cloud / Splunk / Datadog Core Logging Infrastructure  
+**Domain:** High-Throughput System Telemetry & Log Ingestion  
+**Scenario:** Thousands of concurrent worker threads generate diagnostic events simultaneously. Independent logger instances cause file lock collisions, interleaved log outputs, thread contention, and memory buffer exhaustion.
+---
 ## 🎯 Requirements
 
 ### 1. Functional Requirements

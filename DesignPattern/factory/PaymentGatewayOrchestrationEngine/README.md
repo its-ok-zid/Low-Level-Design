@@ -6,7 +6,11 @@ An enterprise cross-border payment platform must integrate with disparate third-
 Directly instantiating providers violates the **Open/Closed Principle (OCP)** and tightly couples business logic to concrete SDKs. We apply the **Factory Method Pattern** to establish parallel product and creator hierarchies, delegating object instantiation to dedicated concrete factories.
 
 ---
-
+## 🏢 Company Context
+**Company:** Stripe / PayPal / Square Developer Platform 
+**Domain:** Cross-Border Merchant Orchestration & Payment Gateways  
+**Scenario:** A financial infrastructure engine must integrate diverse third-party payment rails (PayPal, Stripe, Razorpay) across international markets. Client checkout services must decouple from specific SDK client instantiations and provider-specific handshakes.
+---
 ## 🎯 Requirements
 
 ### 1. Functional Requirements

@@ -6,7 +6,11 @@ In distributed, multithreaded enterprise architectures, multiple background thre
 Creating multiple instances leads to conflicting configurations, resource exhaustion, and memory leaks. The objective is to implement a robust, thread-safe **Singleton Design Pattern** leveraging **Double-Checked Locking** with the `volatile` modifier.
 
 ---
-
+## 🏢 Company Context
+**Company:** Google Infrastructure / AWS Core Services / Oracle Cloud  
+**Domain:** Distributed Configuration & Connection Pool Orchestration  
+**Scenario:** Enterprise applications require centralized management of database handles, connection limits, and runtime flags. Creating multiple configuration loaders exhausts pooled database sockets and leaves services with inconsistent runtime states.
+---
 ## 🎯 Requirements
 
 ### 1. Functional Requirements

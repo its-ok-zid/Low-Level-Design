@@ -6,6 +6,11 @@ The **Dynamic Order & Discount Engine** manages shopping cart orders and compute
 The primary objective is to apply the **Strategy Pattern** under SOLID principles, decoupling the checkout orchestrator and order container from specific discount algorithms.
 
 ---
+## 🏢 Company Context
+**Company:** Amazon Retail / Shopify / Target Digital  
+**Domain:** E-Commerce Promotions & Cart Checkout Services  
+**Scenario:** Seasonal campaigns demand instant execution of tiered, percentage-based, and flat coupon policies. Promo evaluations must execute dynamically at cart checkout without modifying core inventory or order placement classes.
+---
 
 ## 🎯 Requirements
 

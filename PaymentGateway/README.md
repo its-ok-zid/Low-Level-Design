@@ -6,7 +6,10 @@ The **Payment Gateway Module** is a core component of an e-commerce checkout eng
 The primary objective of this exercise is to design an object-oriented payment module strictly adhering to **SOLID principles**, focusing on **polymorphism** to eliminate conditional branching (`if-else` / `switch`) when handling different payment types.
 
 ---
-
+## 🏢 Company Context
+**Company:** PayPal / Adyen / Checkout.com Merchant Services  
+**Domain:** Global Payment Aggregation & Merchant Orchestration  
+**Scenario:** A merchant platform must ingest new regional payment rails (Credit Card, UPI, Klarna, Crypto) on a weekly basis. Core checkout orchestration code cannot be opened, modified, or re-tested for every new payment method rollout without risking production regressions on existing payment streams.
 ## 🎯 Requirements
 
 ### 1. Functional Requirements

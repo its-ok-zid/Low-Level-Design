@@ -6,6 +6,11 @@ The **Multi-Channel Notification Engine** is a core infrastructure component res
 The primary objective of this exercise is to handle **varying payload requirements per channel** (e.g., Email requiring a subject line while SMS does not) without violating the **Interface Segregation Principle (ISP)** or introducing `if-else` routing inside the orchestrator service.
 
 ---
+## 🏢 Company Context
+**Company:** Twilio / AWS SNS / MessageBird Customer Engagement Platform  
+**Domain:** Distributed Event Broadcasting & Real-Time Messaging  
+**Scenario:** High-volume order fulfillment microservices broadcast lifecycle events to customers via disparate delivery mechanisms (SMS, Email, Push). Directly coupling core commerce logic to concrete third-party SDK clients produces brittle systems that cannot failover or migrate providers seamlessly.
+---
 
 ## 🎯 Requirements
 
