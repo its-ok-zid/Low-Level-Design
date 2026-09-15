@@ -63,7 +63,6 @@ public class LicenseManagerTest {
         for (Thread worker : workers) {
             worker.join();
         }
-
         System.out.println("\nFinal Active Token Count in Pool: " + manager.getActiveTokenCount());
     }
 }
