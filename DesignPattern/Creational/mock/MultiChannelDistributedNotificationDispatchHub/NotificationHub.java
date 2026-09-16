@@ -1,4 +1,4 @@
-package DesignPattern.Creational.MultiChannelDistributedNotificationDispatchHub;
+package DesignPattern.Creational.mock.MultiChannelDistributedNotificationDispatchHub;
 
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;

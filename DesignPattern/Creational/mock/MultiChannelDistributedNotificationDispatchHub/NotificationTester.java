@@ -1,4 +1,4 @@
-package DesignPattern.Creational.MultiChannelDistributedNotificationDispatchHub;
+package DesignPattern.Creational.mock.MultiChannelDistributedNotificationDispatchHub;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

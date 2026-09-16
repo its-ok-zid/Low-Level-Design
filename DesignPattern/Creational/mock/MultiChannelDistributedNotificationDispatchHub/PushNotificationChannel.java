@@ -1,4 +1,4 @@
-package DesignPattern.Creational.MultiChannelDistributedNotificationDispatchHub;
+package DesignPattern.Creational.mock.MultiChannelDistributedNotificationDispatchHub;
 
 public class PushNotificationChannel implements NotificationChannel {
     @Override
